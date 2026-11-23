@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=4">
+<link rel="stylesheet" href="assets/style.css?v=5">
 <script src="assets/site.js?v=3"></script>
 </head>
 <body>
@@ -282,8 +282,9 @@
             <li>A floating-base posture with 47 variables, named task points, and re-rooting as a single parameter.</li>
             <li>The sensing-based stability model rebuilt for any number of contacts.</li>
             <li>Joint torques on all 54 axes and joint-strength load factors.</li>
-            <li>An interactive Qt/OpenGL viewer and a skinned 3D body.</li>
+            <li>An interactive Win32/OpenGL viewer and a skinned 3D body.</li>
           </ul>
+          <p class="muted small">It replaces a legacy code base of about 35,000 lines in which the model, maths and drawing lived in one class and gradients came from trial and error.</p>
         </article>
         <article class="card">
           <h3>How it is checked</h3>
@@ -293,7 +294,24 @@
             <div class="stat"><b>41</b><span>degrees of freedom, 18 segments</span></div>
             <div class="stat"><b>90 pp.</b><span>technical report and code guide</span></div>
           </div>
-          <ul class="tags"><li>C++</li><li>Eigen</li><li>doctest</li><li>Qt</li><li>OpenGL</li></ul>
+          <ul class="tags"><li>C++20</li><li>Eigen</li><li>doctest</li><li>vcpkg</li><li>Win32 API</li><li>OpenGL</li></ul>
+
+          <h4 class="card-sub">What the tests prove</h4>
+          <ul class="check-list">
+            <li>Exact Jacobians match numerical differentiation for 12 postures, 3 grounded segments and all 47 posture variables.</li>
+            <li>Joint torques computed two independent ways agree to 10<sup>-9</sup> N·m across 20 random postures and loads.</li>
+            <li>Support-force shares on 400 random contact layouts are never negative, sum to one and reproduce the centre of pressure.</li>
+            <li>Segment lengths hold over 200 random postures, and saved postures reload exactly.</li>
+          </ul>
+
+          <h4 class="card-sub">How the code is layered</h4>
+          <ol class="layer-stack" aria-label="Software layers, top depends on bottom">
+            <li><b>Viewer</b><span>Window, sliders and live charts</span></li>
+            <li><b>Analysis</b><span>Support, GMV stability, statics, strength</span></li>
+            <li><b>Model</b><span>Skeleton, kinematics, Jacobians, centres of gravity</span></li>
+            <li><b>Maths</b><span>Vectors, rotations and transforms (Eigen)</span></li>
+          </ol>
+          <p class="muted small">The model builds and tests without opening a window.</p>
         </article>
       </div>
     </div>

@@ -206,6 +206,29 @@ section.block + section.block { border-top: 1px solid var(--pebble-line); }
 }
 .card p { color: var(--ink); }
 
+/* Card sub-sections: check list and layer stack */
+.card-sub {
+  margin-top: 0.6rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--jade-deep); font-family: var(--font-mono); font-weight: 600;
+}
+.check-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
+.check-list li { position: relative; padding-left: 1.6rem; font-size: 0.95rem; }
+.check-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 0.05rem; width: 1.1rem; height: 1.1rem; border-radius: 50%;
+  background: var(--jade-wash); color: var(--jade-deep); font-size: 0.7rem; display: grid; place-items: center; font-weight: 700;
+}
+.layer-stack { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.layer-stack li {
+  display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.6rem; align-items: center;
+  padding: 0.45rem 0.8rem; border-radius: 10px; background: var(--pebble-pale); border: 1px solid var(--pebble-line);
+  font-size: 0.92rem;
+}
+.layer-stack li > * { min-width: 0; }
+.layer-stack li b { font-family: var(--font-display); color: var(--jade-deep); }
+.layer-stack li:first-child { background: var(--jade-wash); border-color: transparent; }
+.layer-stack li span { color: var(--ink); }
+.small { font-size: 0.9rem; }
+
 /* Looping figure slideshow inside a card */
 .slideshow { display: flex; flex-direction: column; gap: 0.5rem; margin-block: 0.4rem; }
 .slides {
