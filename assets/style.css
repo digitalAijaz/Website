@@ -217,6 +217,8 @@ section.block + section.block { border-top: 1px solid var(--pebble-line); }
   opacity: 0; transition: opacity 0.7s ease; pointer-events: none;
 }
 .slide.is-active { opacity: 1; pointer-events: auto; }
+.slides-dark { background: #17181C; border-color: #2A2C33; }  /* screenshots have a dark viewport */
+.slides-dark .slide { padding: 0; }
 .slide img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .slide-bar { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 0.5rem; }
 .slide-bar > * { min-width: 0; }

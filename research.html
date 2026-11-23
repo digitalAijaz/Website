@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 <script src="assets/site.js?v=3"></script>
 </head>
 <body>
@@ -249,6 +249,34 @@
       <div class="grid-2">
         <article class="card">
           <h3>What changed</h3>
+          <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="MayaManav software screenshots">
+            <div class="slides slides-dark">
+              <figure class="slide is-active" data-caption="The MayaManav digital human: 18 rigid segments, 41 degrees of freedom and anatomical joint limits.">
+                <img src="assets/figures/mayamanav/model.webp" width="1200" height="874" loading="eager" alt="MayaManav digital human standing in its home posture">
+              </figure>
+              <figure class="slide" data-caption="Kinematic skeleton with segment centres of gravity and the whole-body centre of gravity.">
+                <img src="assets/figures/mayamanav/skeleton.webp" width="1200" height="1166" loading="lazy" alt="Stick-figure skeleton of the model with one arm raised">
+              </figure>
+              <figure class="slide" data-caption="Sensing-based stability: base of support, star polygon and the stable region where toe and heel loads stay acceptable.">
+                <img src="assets/figures/mayamanav/gmv-stability.webp" width="1200" height="898" loading="lazy" alt="Top view of the base of support with the stable region shaded">
+              </figure>
+              <figure class="slide" data-caption="Forward reach with 5 kg in the right hand: torque and load factor at every joint, updated as the posture changes.">
+                <img src="assets/figures/mayamanav/forward-reach.webp" width="1200" height="874" loading="lazy" alt="Model reaching forward with a joint torque table and bar charts">
+              </figure>
+              <figure class="slide" data-caption="Lifting 10 kg in each hand: joints coloured by load factor, from green (low) to red (high).">
+                <img src="assets/figures/mayamanav/lifting-10kg.webp" width="1200" height="874" loading="lazy" alt="Model squatting to lift with joints coloured by load">
+              </figure>
+              <figure class="slide" data-caption="The MayaManav software: one slider per degree of freedom, with live stability and joint-load analysis.">
+                <img src="assets/figures/mayamanav/software.webp" width="1600" height="864" loading="lazy" alt="Software window with the 3D model, analysis charts and joint sliders">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
+              <p class="slide-caption" aria-live="polite">The MayaManav digital human: 18 rigid segments, 41 degrees of freedom and anatomical joint limits.</p>
+              <span class="slide-count">1 / 6</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
+            </div>
+          </div>
           <ul>
             <li>Exact closed-form Jacobians for any body point and the whole-body centre of mass, for any grounded segment, verified to 10<sup>-10</sup>. These replace finite-difference gradients that needed 42 full recomputations per step.</li>
             <li>A floating-base posture with 47 variables, named task points, and re-rooting as a single parameter.</li>
