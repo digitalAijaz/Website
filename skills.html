@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/style.css?v=10">
 <script src="assets/site.js?v=3"></script>
 </head>
 <body>
@@ -55,10 +55,22 @@
               <li>JRF and SRF fellowships, Government of India.</li>
               <li>Degree conferred at the IISc Convocation, 10 July 2026.</li>
             </ul>
-            <figure class="photo">
-              <img src="assets/photos/iisc-convocation-2026.webp" width="1400" height="1065" loading="lazy" alt="Dr. Mohd Aijaz Siddiqui holding his PhD certificate in front of the IISc Convocation 2026 backdrop">
-              <figcaption>Receiving the PhD at the IISc Convocation, J N Tata Auditorium, Bengaluru, 10 July 2026.</figcaption>
-            </figure>
+            <div class="slideshow photo-show" data-interval="5000" aria-roledescription="carousel" aria-label="IISc Convocation 2026 photos">
+              <div class="slides slides-photo">
+                <figure class="slide is-active" data-caption="Receiving the PhD certificate at the Division of Mechanical Sciences ceremony, IISc Convocation 2026.">
+                  <img src="assets/photos/iisc-convocation-2026-ceremony.webp" width="1400" height="1050" loading="lazy" alt="Dr. Mohd Aijaz Siddiqui receiving his PhD certificate on stage at the IISc Convocation 2026">
+                </figure>
+                <figure class="slide" data-caption="At the IISc Convocation, J N Tata Auditorium, Bengaluru, 10 July 2026.">
+                  <img src="assets/photos/iisc-convocation-2026.webp" width="1400" height="1065" loading="lazy" alt="Dr. Mohd Aijaz Siddiqui holding his PhD certificate in front of the IISc Convocation 2026 backdrop">
+                </figure>
+              </div>
+              <div class="slide-bar">
+                <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous photo">‹</button>
+                <p class="slide-caption" aria-live="polite">Receiving the PhD certificate at the Division of Mechanical Sciences ceremony, IISc Convocation 2026.</p>
+                <span class="slide-count">1 / 2</span>
+                <button class="slide-btn" type="button" data-dir="1" aria-label="Next photo">›</button>
+              </div>
+            </div>
           </div>
         </li>
         <li class="role">

@@ -354,3 +354,7 @@ tr:last-child td { border-bottom: none; }
 .photo { margin: 1rem 0 0; max-width: 620px; display: flex; flex-direction: column; gap: 0.5rem; }
 .photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-pebble); border: 1px solid var(--pebble-line); }
 .photo figcaption { font-size: 0.9rem; color: var(--pebble); }
+.photo-show { max-width: 620px; margin-top: 1rem; }
+.slides-photo { border-radius: var(--radius-pebble); }
+.slides-photo .slide { padding: 0; }
+.slides-photo .slide img { object-fit: cover; }
