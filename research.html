@@ -95,27 +95,59 @@
         <h2>Natural posturing of digital humans</h2>
         <p>Digital human models usually borrow balance and motion rules from robot arms. My thesis replaces them with what a person can sense, so simulated workers stay stable, comfortable and effort-efficient at every step of a task.</p>
       </div>
-      <div class="grid-2">
-        <article class="card">
-          <span class="meta">Chapter 3 · Postural stability</span>
+      <div class="stack">
+        <article class="card card-wide">
+          <span class="meta">Postural stability</span>
           <h3>Stability from sensed pressure</h3>
           <p>Support reaction forces at each contact point are estimated with Global Mean Value coordinates and a star-polygon strategy. Two continuous measures, the Subjective Stability Measure and the Subjective Discomfort Measure, replace the stable/unstable yes-or-no.</p>
           <p>Finding: the functional stability region seen in experiments emerges on its own from pressure thresholds. Comfort within limits is enough to guarantee stability.</p>
+          <div class="fig-seq">
+            <figure class="fig">
+              <img src="assets/figures/stability/combined-perception.webp" width="1600" height="1436" loading="lazy" alt="Grid of base-of-support maps showing stable and uncomfortable regions for increasing foot load and task importance">
+              <figcaption>Stable (green) and uncomfortable (red) regions inside the base of support, as load on the feet and task importance rise, for normal feet and for a weak left heel.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/ssm.webp" width="1600" height="551" loading="lazy" alt="Contour plots of the Subjective Stability Measure for 60 kg and 100 kg loads">
+              <figcaption>Iso-contours of the Subjective Stability Measure for 60 kg and 100 kg body loads. The area inside the SSM = 2 contour is the functional stability region: 40% of the base at 60 kg and 60% at 100 kg.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/sdm.webp" width="1600" height="692" loading="lazy" alt="Contour plots of the Subjective Discomfort Measure for 60 kg and 100 kg loads">
+              <figcaption>Iso-contours of the Subjective Discomfort Measure for the same loads. Discomfort builds up near the edges of the support, where single contact points carry most of the weight.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/experimental-setup.webp" width="1600" height="1508" loading="lazy" alt="Participant leaning on a force platform surrounded by motion-capture cameras">
+              <figcaption>Validation experiment: participants lean towards a target in eight directions while standing on a force platform, barefoot and on an acupressure mat, with feet tracked by motion capture.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/star-polygon-validation.webp" width="1600" height="895" loading="lazy" alt="Four panels showing valid and invalid centre-of-pressure regions for different sets of support points">
+              <figcaption>Checking the star-polygon method on four contact layouts. Green marks where the centre of pressure gives valid support forces; red marks where it does not. The valid region matches the convex hull of the contacts, as physics requires.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/validation.webp" width="1306" height="1115" loading="lazy" alt="Measured base of support with two nested functional stability regions">
+              <figcaption>Measured base of support (BOS) with the functional stability regions on a normal surface (FSR1) and on an acupressure mat (FSR2). When standing becomes uncomfortable, people use a smaller region.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="assets/figures/stability/ssm-theory-vs-empirical-mat.webp" width="1600" height="984" loading="lazy" alt="Line chart comparing theoretical and empirical stability measure across load and direction">
+              <figcaption>Predicted and measured Subjective Stability Measure on the acupressure mat, for back loads of 0, 10 and 20 kg and eight lean directions. The model follows the measured trend.</figcaption>
+            </figure>
+          </div>
         </article>
+      </div>
+      <div class="grid-3">
         <article class="card">
-          <span class="meta">Chapter 4 · Posture evolution</span>
+          <span class="meta">Posture evolution</span>
           <h3>Motion as a chain of controlled postures</h3>
           <p>A Sense–Perceive–Cognize–Act loop moves the body toward a goal step by step, so every intermediate posture is stable, comfortable and feasible. Joint-space partitioning gives distal joints the reach and proximal joints the balance, and perceptual bias in distance and limb sense is built in.</p>
           <p>Finding: the model can tell why a task fails, whether from discomfort, joint torque or reach limits.</p>
         </article>
         <article class="card">
-          <span class="meta">Chapter 5 · Functional workspace</span>
+          <span class="meta">Functional workspace</span>
           <h3>Unified Effort Measure</h3>
           <p>Joint effort and support discomfort are combined into one measure, then mapped over a sampled grid of hand positions. The maps show low-, moderate- and high-effort zones for reach and pick-and-place tasks under different loads.</p>
           <p>Finding: the functional workspace is a subset of the reachable one, and pick and place workspaces differ for the same person.</p>
         </article>
         <article class="card">
-          <span class="meta">Chapter 5 · Hand paths</span>
+          <span class="meta">Hand paths</span>
           <h3>Effort as a path function</h3>
           <p>Treating effort as the integral over a whole motion explains why natural hand paths curve. Optimised paths used 8–11% less total effort than straight-line paths.</p>
           <p>Validation: lean and reach tests in 8 directions on a force platform and an acupressure mat, with back loads up to 20 kg and motion-capture foot tracking.</p>

@@ -14,6 +14,7 @@
   --dawn: #E9C9A1;        /* sunrise highlight */
   --dawn-wash: #F7EBDD;
   --card: #FFFFFF;
+  --paper: #FFFFFF;       /* figures keep a white page in both themes */
 
   --font-display: "Manrope", "Segoe UI", system-ui, sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
@@ -204,6 +205,17 @@ section.block + section.block { border-top: 1px solid var(--pebble-line); }
   display: flex; flex-direction: column; gap: 0.6rem;
 }
 .card p { color: var(--ink); }
+
+/* Thesis figures: full-width card with figures stacked one after another */
+.stack { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 1.2rem; }
+.card-wide p { max-width: 75ch; }
+.fig-seq { display: flex; flex-direction: column; gap: 1.6rem; margin-top: 1rem; }
+.fig { margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.fig img {
+  display: block; width: 100%; max-width: 880px; height: auto; margin: 0 auto;
+  background: var(--paper); border: 1px solid var(--pebble-line); border-radius: 14px; padding: 10px;
+}
+.fig figcaption { color: var(--pebble); font-size: 0.95rem; max-width: 880px; margin: 0 auto; width: 100%; }
 .card .meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--pebble); letter-spacing: .04em; }
 .card a.more { margin-top: auto; font-weight: 700; text-decoration: none; }
 
