@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research &amp; Projects · Aijaz Siddiqui</title>
+<meta name="description" content="Research and projects of Dr. Mohd Aijaz Siddiqui: UAV vision autonomy, IISc Maya-Manav digital human model, sensing-based stability and the Unified Effort Measure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="index.html"><span class="brand-mark">AS</span><span>Aijaz Siddiqui</span></a>
+    <div class="nav-tools">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">☾</button>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="research.html" aria-current="page">Research &amp; Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="skills.html">Education &amp; Skills</a></li>
+      <li><a class="cv-link" href="assets/Aijaz-Siddiqui-CV.pdf">Download CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Drones · Digital humans · Ergonomics</span>
+      <h1>Research &amp; Projects</h1>
+      <p>Two threads run through my work: machines that see and respond to people, and models that predict how people move, balance and tire.</p>
+    </div>
+  </section>
+
+  <section class="block" id="uav">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">IIT (ISM) Dhanbad · 2025 – present</span>
+        <h2>UAV systems and vision autonomy</h2>
+        <p>Work at the Drone Electronics Lab under the MeitY-Swayaan project.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Vision-based drone applications</h3>
+          <p>Face detection, gesture-based control, visual odometry and surveillance on programmable UAVs. This became the vision and autonomy base for the lab's later projects.</p>
+          <ul class="tags jade"><li>Python</li><li>OpenCV</li><li>Programmable UAVs</li></ul>
+        </article>
+        <article class="card">
+          <h3>Fixed-wing VTOL and gesture-controlled drones</h3>
+          <p>I lead a team of 8 interns and research staff from design and 3D-printed prototypes through assembly, calibration and flight testing.</p>
+          <ul class="tags jade"><li>UAV design</li><li>3D printing</li><li>Flight testing</li></ul>
+        </article>
+        <article class="card">
+          <h3>Training and capacity building</h3>
+          <p>Taught vision-based drone modelling to defence personnel at 21 Assam Rifles, Manipur, and co-ran two hands-on drone bootcamps. Wrote 3 grant proposals, including one on UAV-swarm airborne RF systems.</p>
+          <ul class="tags jade"><li>Defence training</li><li>Bootcamps</li><li>Grant writing</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="dhm">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">IISc Bangalore · PhD 2017 – 2026</span>
+        <h2>Natural posturing of digital humans</h2>
+        <p>Digital human models usually borrow balance and motion rules from robot arms. My thesis replaces them with what a person can sense, so simulated workers stay stable, comfortable and effort-efficient at every step of a task.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="meta">Chapter 3 · Postural stability</span>
+          <h3>Stability from sensed pressure</h3>
+          <p>Support reaction forces at each contact point are estimated with Global Mean Value coordinates and a star-polygon strategy. Two continuous measures, the Subjective Stability Measure and the Subjective Discomfort Measure, replace the stable/unstable yes-or-no.</p>
+          <p>Finding: the functional stability region seen in experiments emerges on its own from pressure thresholds. Comfort within limits is enough to guarantee stability.</p>
+        </article>
+        <article class="card">
+          <span class="meta">Chapter 4 · Posture evolution</span>
+          <h3>Motion as a chain of controlled postures</h3>
+          <p>A Sense–Perceive–Cognize–Act loop moves the body toward a goal step by step, so every intermediate posture is stable, comfortable and feasible. Joint-space partitioning gives distal joints the reach and proximal joints the balance, and perceptual bias in distance and limb sense is built in.</p>
+          <p>Finding: the model can tell why a task fails, whether from discomfort, joint torque or reach limits.</p>
+        </article>
+        <article class="card">
+          <span class="meta">Chapter 5 · Functional workspace</span>
+          <h3>Unified Effort Measure</h3>
+          <p>Joint effort and support discomfort are combined into one measure, then mapped over a sampled grid of hand positions. The maps show low-, moderate- and high-effort zones for reach and pick-and-place tasks under different loads.</p>
+          <p>Finding: the functional workspace is a subset of the reachable one, and pick and place workspaces differ for the same person.</p>
+        </article>
+        <article class="card">
+          <span class="meta">Chapter 5 · Hand paths</span>
+          <h3>Effort as a path function</h3>
+          <p>Treating effort as the integral over a whole motion explains why natural hand paths curve. Optimised paths used 8–11% less total effort than straight-line paths.</p>
+          <p>Validation: lean and reach tests in 8 directions on a force platform and an acupressure mat, with back loads up to 20 kg and motion-capture foot tracking.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="mayamanav">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">2026 – present</span>
+        <h2>MayaManav, re-engineered</h2>
+        <p>After the PhD I rebuilt the Maya-Manav digital human from its published definition as a modular, tested C++ code base, so that later work starts from verified numbers.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>What changed</h3>
+          <ul>
+            <li>Exact closed-form Jacobians for any body point and the whole-body centre of mass, for any grounded segment, verified to 10<sup>-10</sup>. These replace finite-difference gradients that needed 42 full recomputations per step.</li>
+            <li>A floating-base posture with 47 variables, named task points, and re-rooting as a single parameter.</li>
+            <li>The sensing-based stability model rebuilt for any number of contacts.</li>
+            <li>Joint torques on all 54 axes and joint-strength load factors.</li>
+            <li>An interactive Qt/OpenGL viewer and a skinned 3D body.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>How it is checked</h3>
+          <div class="stats" style="grid-template-columns: 1fr 1fr;">
+            <div class="stat"><b>49</b><span>automated test cases</span></div>
+            <div class="stat"><b>33,147</b><span>individual checks, all passing</span></div>
+            <div class="stat"><b>41</b><span>degrees of freedom, 18 segments</span></div>
+            <div class="stat"><b>90 pp.</b><span>technical report and code guide</span></div>
+          </div>
+          <ul class="tags"><li>C++</li><li>Eigen</li><li>doctest</li><li>Qt</li><li>OpenGL</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Earlier work</span>
+        <h2>Other projects</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>When</th><th>Outcome</th></tr></thead>
+          <tbody>
+            <tr><td>Cognition modelling and NIOSH lifting analysis in Siemens JACK</td><td>2017 – 2019</td><td>Simulated assembly operations; suggested lifting-task redesigns</td></tr>
+            <tr><td>Cognitive performance of skilled operators (M.Tech)</td><td>2013 – 2015</td><td>Control-panel redesign that improved reaction time; presented at HWWE 2018</td></tr>
+            <tr><td>Animal ergonomics in bullock-cart design (M.Tech dissertation)</td><td>2014 – 2015</td><td>New harness and hitch design modelled in Siemens NX</td></tr>
+            <tr><td>Integrated coal handling and pulverisation system</td><td>2012 – 2013</td><td>NPTI licence programme project at BPSCL</td></tr>
+            <tr><td>Hydrogen-fired gas turbine systems (B.Tech thesis)</td><td>2009 – 2010</td><td>Grade A (Distinction)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Dr. Mohd Aijaz Siddiqui</span>
+    <span><a href="mailto:visionaijaz@gmail.com">visionaijaz@gmail.com</a> · <a href="https://www.linkedin.com/in/eraijaz/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+</body>
+</html>
