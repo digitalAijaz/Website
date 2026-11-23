@@ -366,3 +366,7 @@ tr:last-child td { border-bottom: none; }
 .slide-bar-compact { display: flex; justify-content: center; gap: 0.8rem; }
 .slide-bar-compact .slide-count { order: 0; }
 .slide-bar-compact .slide-btn:last-child { order: 0; }
+
+/* Wide frame for application screenshots */
+.slides-wide { aspect-ratio: 16 / 9; }
+.slides-wide .slide { padding: 4px; }

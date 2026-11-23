@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=11">
+<link rel="stylesheet" href="assets/style.css?v=12">
 <script src="assets/site.js?v=4"></script>
 </head>
 <body>
@@ -69,6 +69,31 @@
         <article class="card">
           <span class="meta">Design tools</span>
           <h3>Propulsion design suite</h3>
+          <div class="slideshow" data-interval="4000" aria-roledescription="carousel" aria-label="Propulsion design suite screenshots">
+            <div class="slides slides-wide">
+              <figure class="slide is-active" data-caption="Home screen with the six design modules.">
+                <img src="assets/figures/propulsion/home.webp" width="1400" height="743" loading="eager" alt="UAV Design Suite home screen with module tiles">
+              </figure>
+              <figure class="slide" data-caption="UAV sizing with live weather for air density.">
+                <img src="assets/figures/propulsion/uav-sizing.webp" width="1400" height="744" loading="lazy" alt="UAV sizing screen with design inputs and live weather">
+              </figure>
+              <figure class="slide" data-caption="Blade chord and pitch distribution along the radius.">
+                <img src="assets/figures/propulsion/blade-plots.webp" width="1400" height="743" loading="lazy" alt="Plots of blade chord and pitch distribution">
+              </figure>
+              <figure class="slide" data-caption="Motor, ESC and battery recommendations with flight time.">
+                <img src="assets/figures/propulsion/components.webp" width="1400" height="742" loading="lazy" alt="Component recommendation screen with flight time estimates">
+              </figure>
+              <figure class="slide" data-caption="Live telemetry from the flight controller over MAVLink.">
+                <img src="assets/figures/propulsion/live-telemetry.webp" width="1400" height="748" loading="lazy" alt="Live telemetry dashboard connected to a flight controller">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous screenshot">‹</button>
+              <p class="slide-caption" aria-live="polite">Home screen with the six design modules.</p>
+              <span class="slide-count">1 / 5</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next screenshot">›</button>
+            </div>
+          </div>
           <p>Software that sizes propellers from a thrust target using blade-element momentum theory and matches motors and batteries. Its predictions were checked against three real flights.</p>
           <ul class="tags jade"><li>BEMT</li><li>PyQt6</li><li>MAVLink</li></ul>
         </article>
