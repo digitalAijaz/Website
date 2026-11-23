@@ -349,3 +349,8 @@ tr:last-child td { border-bottom: none; }
   .pub { grid-template-columns: 1fr; gap: 0.3rem; }
   .contact-band { padding: 1.4rem; }
 }
+
+/* Photo inside a timeline entry */
+.photo { margin: 1rem 0 0; max-width: 620px; display: flex; flex-direction: column; gap: 0.5rem; }
+.photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-pebble); border: 1px solid var(--pebble-line); }
+.photo figcaption { font-size: 0.9rem; color: var(--pebble); }
