@@ -45,7 +45,7 @@
       <div class="section-head">
         <span class="eyebrow">IIT (ISM) Dhanbad · 2025 – present</span>
         <h2>UAV systems</h2>
-        <p>A portfolio of drone systems taken from concept to flight by the Drone Electronics Lab team at IIT (ISM) Dhanbad, under the MeitY-SwaYaan programme.</p>
+        <p>Drone systems my team at the Drone Electronics Lab, IIT (ISM) Dhanbad, has taken from concept to flight under the MeitY-SwaYaan programme.</p>
       </div>
       <div class="grid-2">
         <article class="card">
@@ -102,14 +102,11 @@
               <figure class="slide" data-caption="Here3+ GPS connected over the DroneCAN bus: CAN 1 and CAN 2 pinouts.">
                 <img src="assets/figures/vtol/here3-gps.webp" width="1400" height="1132" loading="lazy" alt="Here3+ GPS module with CAN connector pinouts">
               </figure>
-              <figure class="slide" data-caption="Flight-log workflow across Mission Planner, MAVExplorer, ArduPilot WebTools and QGroundControl.">
-                <img src="assets/figures/vtol/log-analysis-tools.webp" width="1400" height="1019" loading="lazy" alt="Flowchart of flight log analysis using four tools">
-              </figure>
             </div>
             <div class="slide-bar">
               <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous">‹</button>
               <p class="slide-caption" aria-live="polite">Night flight test: vertical take-off of the hybrid VTOL.</p>
-              <span class="slide-count">1 / 7</span>
+              <span class="slide-count">1 / 6</span>
               <button class="slide-btn" type="button" data-dir="1" aria-label="Next">›</button>
             </div>
           </div>
@@ -181,6 +178,34 @@
         <article class="card">
           <span class="meta">Safety and autonomy</span>
           <h3>Flight forensics and vision landing</h3>
+          <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="Flight forensics and vision landing figures">
+            <div class="slides slides-wide">
+              <figure class="slide is-active" data-caption="How flight logs are collected: DataFlash on the SD card and telemetry over the radio link.">
+                <img src="assets/figures/forensics/log-collection.webp" width="739" height="633" loading="eager" alt="Diagram of flight log collection through SD card and radio telemetry">
+              </figure>
+              <figure class="slide" data-caption="DataFlash log message types viewed in Mission Planner.">
+                <img src="assets/figures/forensics/dataflash-messages.webp" width="1033" height="617" loading="lazy" alt="Mission Planner log browser listing DataFlash message types">
+              </figure>
+              <figure class="slide" data-caption="Flight-log workflow across Mission Planner, MAVExplorer, ArduPilot WebTools and QGroundControl.">
+                <img src="assets/figures/forensics/log-analysis-tools.webp" width="1400" height="1019" loading="lazy" alt="Flowchart of flight log analysis using four tools">
+              </figure>
+              <figure class="slide" data-caption="Vibration analysis: a 62.7 m/s/s peak at 523 s against a 30 m/s/s safe limit.">
+                <img src="assets/figures/forensics/vibration.webp" width="1400" height="719" loading="lazy" alt="Plot of total vibration magnitude over flight time">
+              </figure>
+              <figure class="slide" data-caption="GPS and compass health over a flight, with GPS glitch events marked.">
+                <img src="assets/figures/forensics/gps-compass.webp" width="962" height="843" loading="lazy" alt="Plots of GPS HDop, satellite count and compass field magnitude over time">
+              </figure>
+              <figure class="slide" data-caption="Towards GPS-free navigation: ArUco marker detection and pose estimation for precision landing.">
+                <img src="assets/figures/forensics/aruco-pipeline.webp" width="1400" height="933" loading="lazy" alt="Flowchart of ArUco marker detection leading to autonomous landing">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous">‹</button>
+              <p class="slide-caption" aria-live="polite">How flight logs are collected: DataFlash on the SD card and telemetry over the radio link.</p>
+              <span class="slide-count">1 / 6</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next">›</button>
+            </div>
+          </div>
           <p>Reconstructed a crash from flight logs across twelve flights, and built a GPS-free landing pipeline that guides the drone onto ArUco markers.</p>
           <ul class="tags jade"><li>Log analysis</li><li>OpenCV</li><li>Raspberry Pi</li></ul>
         </article>
