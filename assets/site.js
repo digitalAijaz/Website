@@ -60,15 +60,33 @@
         if (img) { img.src = img.getAttribute("data-src"); img.removeAttribute("data-src"); }
       }
       prime(0); prime(1);
+      // A video slide plays to the end, then the show moves on; leaving it pauses the video
+      function videoOf(k) { return slides[k].querySelector("video"); }
+      function playIfVideo() {
+        var v = videoOf(i);
+        if (!v || reduceMotion) return;
+        try { v.currentTime = 0; } catch (e) {}
+        var p = v.play(); if (p && p.catch) p.catch(function () {});
+      }
+      slides.forEach(function (s, k) {
+        var v = s.querySelector("video");
+        if (v) v.addEventListener("ended", function () { if (k === i && !paused) { go(i + 1); start(); } });
+      });
       function go(n) {
+        var old = videoOf(i); if (old) old.pause();
         slides[i].classList.remove("is-active");
         i = (n + slides.length) % slides.length;
         prime(i); prime(i + 1);
         slides[i].classList.add("is-active");
         if (caption) caption.textContent = slides[i].getAttribute("data-caption") || "";
         if (count) count.textContent = (i + 1) + " / " + slides.length;
+        playIfVideo();
       }
-      function start() { stop(); if (!reduceMotion && !paused) timer = setInterval(function () { go(i + 1); }, interval); }
+      function start() {
+        stop();
+        if (reduceMotion || paused || videoOf(i)) return;   // videos advance on "ended"
+        timer = setInterval(function () { go(i + 1); if (videoOf(i)) stop(); }, interval);
+      }
       function stop() { if (timer) { clearInterval(timer); timer = null; } }
       show.querySelectorAll(".slide-btn").forEach(function (b) {
         b.addEventListener("click", function () { go(i + parseInt(b.getAttribute("data-dir"), 10)); start(); });
@@ -78,6 +96,7 @@
       show.addEventListener("focusin", function () { paused = true; stop(); });
       show.addEventListener("focusout", function () { paused = false; start(); });
       document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+      playIfVideo();
       start();
     });
 

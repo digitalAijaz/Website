@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=12">
-<script src="assets/site.js?v=4"></script>
+<link rel="stylesheet" href="assets/style.css?v=13">
+<script src="assets/site.js?v=5"></script>
 </head>
 <body>
 
@@ -51,6 +51,31 @@
         <article class="card">
           <span class="meta">Human–drone interaction</span>
           <h3>Gesture-controlled drone</h3>
+          <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="Gesture-controlled drone video and figures">
+            <div class="slides slides-wide">
+              <figure class="slide is-active" data-caption="Field flight test of the gesture-controlled drone.">
+                <video src="assets/figures/gesture/gesture-demo.mp4" poster="assets/figures/gesture/gesture-demo-poster.webp" muted playsinline preload="metadata" controls aria-label="Video of the gesture-controlled drone flight test"></video>
+              </figure>
+              <figure class="slide" data-caption="System architecture: hand gesture to MPU6050 and ESP32, over ESP-NOW to ESP8266, then MAVLink to the Pixhawk.">
+                <img src="assets/figures/gesture/architecture.webp" width="1400" height="716" loading="lazy" alt="Diagram of the gesture control chain from glove sensors to the drone">
+              </figure>
+              <figure class="slide" data-caption="Gesture set: tilt for direction, tap and hold for altitude, flat hand to hover.">
+                <img src="assets/figures/gesture/gesture-mapping.webp" width="1400" height="590" loading="lazy" alt="Table of hand gestures and the matching drone responses">
+              </figure>
+              <figure class="slide" data-caption="Wiring the ESP8266 receiver to the Pixhawk TELEM port over UART.">
+                <img src="assets/figures/gesture/uart-wiring.webp" width="1400" height="1136" loading="lazy" alt="Wiring diagram from an ESP8266 board to a Pixhawk telemetry port">
+              </figure>
+              <figure class="slide" data-caption="Bench validation: live channel response in Mission Planner and the controller&#39;s serial output.">
+                <img src="assets/figures/gesture/bench-validation.webp" width="1400" height="837" loading="lazy" alt="Breadboard prototype with Mission Planner radio calibration and serial monitor output">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous">‹</button>
+              <p class="slide-caption" aria-live="polite">Field flight test of the gesture-controlled drone.</p>
+              <span class="slide-count">1 / 5</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next">›</button>
+            </div>
+          </div>
           <p>A wearable controller that reads hand tilt and sends roll, pitch and throttle commands to a Pixhawk drone over ESP-NOW and MAVLink. First flight completed, with sub-millisecond average link latency.</p>
           <ul class="tags jade"><li>ESP32</li><li>MAVLink</li><li>ArduPilot</li></ul>
         </article>

@@ -370,3 +370,4 @@ tr:last-child td { border-bottom: none; }
 /* Wide frame for application screenshots */
 .slides-wide { aspect-ratio: 16 / 9; }
 .slides-wide .slide { padding: 4px; }
+.slide video { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; border-radius: 8px; }
