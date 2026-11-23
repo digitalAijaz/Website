@@ -45,6 +45,35 @@
       });
     });
 
+    // Looping slideshows: <div class="slideshow" data-interval="ms"> with .slide figures
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll(".slideshow").forEach(function (show) {
+      var slides = show.querySelectorAll(".slide");
+      var caption = show.querySelector(".slide-caption");
+      var count = show.querySelector(".slide-count");
+      var interval = parseInt(show.getAttribute("data-interval"), 10) || 4500;
+      var i = 0, timer = null, paused = false;
+      if (slides.length < 2) return;
+      function go(n) {
+        slides[i].classList.remove("is-active");
+        i = (n + slides.length) % slides.length;
+        slides[i].classList.add("is-active");
+        if (caption) caption.textContent = slides[i].getAttribute("data-caption") || "";
+        if (count) count.textContent = (i + 1) + " / " + slides.length;
+      }
+      function start() { stop(); if (!reduceMotion && !paused) timer = setInterval(function () { go(i + 1); }, interval); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      show.querySelectorAll(".slide-btn").forEach(function (b) {
+        b.addEventListener("click", function () { go(i + parseInt(b.getAttribute("data-dir"), 10)); start(); });
+      });
+      show.addEventListener("mouseenter", function () { paused = true; stop(); });
+      show.addEventListener("mouseleave", function () { paused = false; start(); });
+      show.addEventListener("focusin", function () { paused = true; stop(); });
+      show.addEventListener("focusout", function () { paused = false; start(); });
+      document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+      start();
+    });
+
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
   });
