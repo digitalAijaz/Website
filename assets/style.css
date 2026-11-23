@@ -358,3 +358,11 @@ tr:last-child td { border-bottom: none; }
 .slides-photo { border-radius: var(--radius-pebble); }
 .slides-photo .slide { padding: 0; }
 .slides-photo .slide img { object-fit: cover; }
+
+/* Home hero slideshow: no captions, mixed light figures and dark screenshots */
+.hero-show { padding: 1rem; }
+.hero-show .slideshow { margin: 0; }
+.slide.slide-dark { background: #17181C; padding: 0; }
+.slide-bar-compact { display: flex; justify-content: center; gap: 0.8rem; }
+.slide-bar-compact .slide-count { order: 0; }
+.slide-bar-compact .slide-btn:last-child { order: 0; }

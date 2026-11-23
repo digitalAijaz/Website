@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=10">
-<script src="assets/site.js?v=3"></script>
+<link rel="stylesheet" href="assets/style.css?v=11">
+<script src="assets/site.js?v=4"></script>
 </head>
 <body>
 
@@ -46,31 +46,110 @@
         </div>
       </div>
 
-      <figure class="figure-card" aria-labelledby="fig-cap">
-        <svg viewBox="0 0 320 250" role="img" aria-label="Diagram of two feet with six contact points forming a star polygon around the centre of pressure">
-          <path class="fig-foot" d="M105,225 C80,225 72,190 75,150 C78,110 70,80 85,55 C95,38 128,38 132,60 C136,85 130,120 132,160 C134,200 128,225 105,225 Z"/>
-          <path class="fig-foot" d="M215,225 C240,225 248,190 245,150 C242,110 250,80 235,55 C225,38 192,38 188,60 C184,85 190,120 188,160 C186,200 192,225 215,225 Z"/>
-          <polygon class="fig-star" points="85,110 122,60 198,60 235,110 215,210 105,210"/>
-          <g class="fig-spoke">
-            <line x1="158" y1="140" x2="85" y2="110"/><line x1="158" y1="140" x2="122" y2="60"/>
-            <line x1="158" y1="140" x2="198" y2="60"/><line x1="158" y1="140" x2="235" y2="110"/>
-            <line x1="158" y1="140" x2="215" y2="210"/><line x1="158" y1="140" x2="105" y2="210"/>
-          </g>
-          <rect class="fig-bar" x="66" y="92" width="6" height="16" rx="2"/>
-          <rect class="fig-bar" x="128" y="38" width="6" height="20" rx="2"/>
-          <rect class="fig-bar" x="186" y="34" width="6" height="24" rx="2"/>
-          <rect class="fig-bar" x="248" y="86" width="6" height="22" rx="2"/>
-          <rect class="fig-bar" x="224" y="174" width="6" height="34" rx="2"/>
-          <rect class="fig-bar" x="88" y="180" width="6" height="28" rx="2"/>
-          <circle class="fig-contact" cx="85" cy="110" r="6"/><circle class="fig-contact" cx="122" cy="60" r="6"/>
-          <circle class="fig-contact" cx="198" cy="60" r="6"/><circle class="fig-contact" cx="235" cy="110" r="6"/>
-          <circle class="fig-contact" cx="215" cy="210" r="6"/><circle class="fig-contact" cx="105" cy="210" r="6"/>
-          <circle class="fig-cop" cx="158" cy="140" r="8"/>
-          <text class="fig-label" x="170" y="146">COP</text>
-          <text class="fig-label" x="12" y="244">6 contacts · load share per point</text>
-        </svg>
-        <figcaption id="fig-cap">From my PhD: the body's weight is shared across six foot contacts using mean-value coordinates. Balance is judged by the pressure a person can feel, not only by a geometric hull.</figcaption>
-      </figure>
+      <div class="figure-card hero-show">
+        <div class="slideshow" data-interval="3500" aria-roledescription="carousel" aria-label="Figures from my research and software">
+          <div class="slides">
+            <figure class="slide slide-dark is-active">
+              <img src="assets/figures/mayamanav/model.webp" width="1200" height="874" alt="MayaManav digital human standing in its home posture">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/figures/mayamanav/skeleton.webp" width="1200" height="1166" alt="Stick-figure skeleton of the model with one arm raised">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/figures/mayamanav/gmv-stability.webp" width="1200" height="898" alt="Top view of the base of support with the stable region shaded">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/figures/mayamanav/forward-reach.webp" width="1200" height="874" alt="Model reaching forward with a joint torque table and bar charts">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/figures/mayamanav/lifting-10kg.webp" width="1200" height="874" alt="Model squatting to lift with joints coloured by load">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/figures/mayamanav/software.webp" width="1600" height="864" alt="Software window with the 3D model, analysis charts and joint sliders">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/star-polygon-validation.webp" width="1600" height="895" alt="Four panels showing valid and invalid centre-of-pressure regions for different sets of support points">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/ssm.webp" width="1600" height="551" alt="Contour plots of the Subjective Stability Measure for 60 kg and 100 kg loads">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/sdm.webp" width="1600" height="692" alt="Contour plots of the Subjective Discomfort Measure for 60 kg and 100 kg loads">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/combined-perception.webp" width="1600" height="1436" alt="Grid of base-of-support maps showing stable and uncomfortable regions for increasing foot load and task importance">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/experimental-setup.webp" width="1600" height="1508" alt="Participant leaning on a force platform surrounded by motion-capture cameras">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/ssm-theory-vs-empirical-mat.webp" width="1600" height="984" alt="Line chart comparing theoretical and empirical stability measure across load and direction">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/stability/validation.webp" width="1306" height="1115" alt="Measured base of support with two nested functional stability regions">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/dhm-components.webp" width="1600" height="936" alt="Diagram of the digital human as body and mind connected through sensing, perception, cognition and action">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/path-planning-scheme.webp" width="1600" height="1270" alt="Flowchart of iterative posture evolution with path planning">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/ankle-strategy.webp" width="1600" height="1152" alt="Foot outlines showing the centre of pressure moving after ankle rotation">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/final-reach-strategy.webp" width="1600" height="1645" alt="Flowchart of the final reach strategy with joint-space partitioning">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/task-vs-vulnerability.webp" width="1600" height="638" alt="Two foot diagrams comparing centre-of-pressure locations">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/obstacle-avoidance.webp" width="1600" height="496" alt="Sequence of digital human postures reaching around an obstacle">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/posture/experimental-hand-path.webp" width="1600" height="730" alt="Two measured curved hand trajectories for eating and reaching">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/workspace/weak-left-big-toe.webp" width="1600" height="1666" alt="Two transverse-plane effort maps comparing normal feet and a weak left big toe">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/workspace/auxiliary-balancing.webp" width="1600" height="1641" alt="Two transverse-plane effort maps comparing an inactive and an active left arm">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/workspace/picture3.webp" width="1600" height="549" alt="Three reach envelope plots comparing simulation, measured data and the presented method">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/workspace/stance-envelopes.webp" width="1600" height="717" alt="Top view of a person with reach envelopes for normal and wide stance">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/workspace/effort-weightages.webp" width="1600" height="1173" alt="Two sagittal effort maps with different effort weightings">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/effort-budget.webp" width="1600" height="1517" alt="Sketch of hand paths and a plot of effort against path length with an effort budget line">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/path-idea.webp" width="1600" height="758" alt="Sequence of panels showing a hand path built point by point towards a goal">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/hexagons-transverse.webp" width="1600" height="1013" alt="Effort map with three hexagonal sequences of reach targets and curved paths">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/no-load-vs-3kg.webp" width="1600" height="872" alt="Hexagon reach paths with and without a 3 kg hand load">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/fatigue.webp" width="1600" height="995" alt="Hexagon reach paths comparing full strength and fatigued reach">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/handpaths/pick-vs-no-pick.webp" width="1600" height="976" alt="Forward and return paths showing targets that are reachable but cannot be picked from">
+            </figure>
+          </div>
+          <div class="slide-bar slide-bar-compact">
+            <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
+            <span class="slide-count">1 / 31</span>
+            <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

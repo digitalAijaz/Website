@@ -54,9 +54,16 @@
       var interval = parseInt(show.getAttribute("data-interval"), 10) || 4500;
       var i = 0, timer = null, paused = false;
       if (slides.length < 2) return;
+      // Images marked data-src load only when their slide (or the next one) is about to show
+      function prime(k) {
+        var img = slides[(k + slides.length) % slides.length].querySelector("img[data-src]");
+        if (img) { img.src = img.getAttribute("data-src"); img.removeAttribute("data-src"); }
+      }
+      prime(0); prime(1);
       function go(n) {
         slides[i].classList.remove("is-active");
         i = (n + slides.length) % slides.length;
+        prime(i); prime(i + 1);
         slides[i].classList.add("is-active");
         if (caption) caption.textContent = slides[i].getAttribute("data-caption") || "";
         if (count) count.textContent = (i + 1) + " / " + slides.length;
