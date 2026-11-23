@@ -136,6 +136,37 @@
         <article class="card">
           <span class="meta">Posture evolution</span>
           <h3>Motion as a chain of controlled postures</h3>
+          <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="Posture evolution figures">
+            <div class="slides">
+              <figure class="slide is-active" data-caption="The model as Body and Mind: sensing, perception and cognition drive the actions that move the joints.">
+                <img src="assets/figures/posture/dhm-components.webp" width="1600" height="936" loading="eager" alt="Diagram of the digital human as body and mind connected through sensing, perception, cognition and action">
+              </figure>
+              <figure class="slide" data-caption="Reach as a series of intermediate targets, each checked for postural quality before moving on.">
+                <img src="assets/figures/posture/path-planning-scheme.webp" width="1600" height="1270" loading="lazy" alt="Flowchart of iterative posture evolution with path planning">
+              </figure>
+              <figure class="slide" data-caption="Ankle strategy: rotating at the ankle moves the centre of pressure away from the most uncomfortable contact.">
+                <img src="assets/figures/posture/ankle-strategy.webp" width="1600" height="1152" loading="lazy" alt="Foot outlines showing the centre of pressure moving after ankle rotation">
+              </figure>
+              <figure class="slide" data-caption="The full algorithm: reach segments move the hand, while ankle and hip strategies keep the posture acceptable.">
+                <img src="assets/figures/posture/final-reach-strategy.webp" width="1600" height="1645" loading="lazy" alt="Flowchart of the final reach strategy with joint-space partitioning">
+              </figure>
+              <figure class="slide" data-caption="Final centre of pressure: a conventional method loads the small toe (left); the proposed method keeps it central (right).">
+                <img src="assets/figures/posture/task-vs-vulnerability.webp" width="1600" height="638" loading="lazy" alt="Two foot diagrams comparing centre-of-pressure locations">
+              </figure>
+              <figure class="slide" data-caption="Posture evolution, left to right: the digital human reaches the target while avoiding an obstacle.">
+                <img src="assets/figures/posture/obstacle-avoidance.webp" width="1600" height="496" loading="lazy" alt="Sequence of digital human postures reaching around an obstacle">
+              </figure>
+              <figure class="slide" data-caption="Curved hand paths measured in people while eating and reaching. Adapted from Zarrin et al., 2021.">
+                <img src="assets/figures/posture/experimental-hand-path.webp" width="1600" height="730" loading="lazy" alt="Two measured curved hand trajectories for eating and reaching">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
+              <p class="slide-caption" aria-live="polite">The model as Body and Mind: sensing, perception and cognition drive the actions that move the joints.</p>
+              <span class="slide-count">1 / 7</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
+            </div>
+          </div>
           <p>A Sense–Perceive–Cognize–Act loop moves the body toward a goal step by step, so every intermediate posture is stable, comfortable and feasible. Joint-space partitioning gives distal joints the reach and proximal joints the balance, and perceptual bias in distance and limb sense is built in.</p>
           <p>Finding: the model can tell why a task fails, whether from discomfort, joint torque or reach limits.</p>
         </article>
