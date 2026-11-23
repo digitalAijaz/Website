@@ -230,6 +230,12 @@ section.block + section.block { border-top: 1px solid var(--pebble-line); }
 .role h3 { margin-bottom: 0.15rem; }
 .role .org { color: var(--jade-deep); font-weight: 700; }
 .role ul { margin: 0.7rem 0 0; padding-left: 1.15rem; }
+.role-summary { margin-top: 0.7rem; }
+.role h4 {
+  margin-top: 1.1rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--jade-deep); font-family: var(--font-mono); font-weight: 600;
+}
+.role h4 + ul { margin-top: 0.35rem; }
 .role li { margin: 0.3rem 0; }
 .role li::marker { color: var(--jade); }
 .highlight {
