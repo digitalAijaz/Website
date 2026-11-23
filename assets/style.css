@@ -15,7 +15,6 @@
   --dawn-wash: #F7EBDD;
   --card: #FFFFFF;
   --paper: #FFFFFF;       /* figures keep a white page in both themes */
-  --dawn-strong: #E9C9A1; /* sunrise accent on the darkest surface */
 
   --font-display: "Manrope", "Segoe UI", system-ui, sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
@@ -37,7 +36,7 @@
   :root:not([data-theme="light"]) {
     --mist: #121816; --pebble-pale: #1A2220; --pebble-line: #2A3431; --pebble: #9AA39C;
     --ink: #E6ECE8; --jade: #5CC7A2; --jade-deep: #7DD8B7; --jade-wash: #183A30;
-    --dawn: #C9A27A; --dawn-wash: #2A231B; --card: #172020; --dawn-strong: #8A5A2B;
+    --dawn: #C9A27A; --dawn-wash: #2A231B; --card: #172020;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
     color-scheme: dark;
   }
@@ -45,7 +44,7 @@
 :root[data-theme="dark"] {
   --mist: #121816; --pebble-pale: #1A2220; --pebble-line: #2A3431; --pebble: #9AA39C;
   --ink: #E6ECE8; --jade: #5CC7A2; --jade-deep: #7DD8B7; --jade-wash: #183A30;
-  --dawn: #C9A27A; --dawn-wash: #2A231B; --card: #172020; --dawn-strong: #8A5A2B;
+  --dawn: #C9A27A; --dawn-wash: #2A231B; --card: #172020;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
   color-scheme: dark;
 }
@@ -226,17 +225,14 @@ section.block + section.block { border-top: 1px solid var(--pebble-line); }
 }
 .layer-stack li > * { min-width: 0; }
 .layer-stack li b { font-family: var(--font-display); }
-/* Light at the top (what people see) to deep at the base (the foundation), all theme tokens */
+/* Four light theme tints, each with a coloured left edge: sunrise -> jade -> pebble */
+.layer-stack li { border-left-width: 5px; }
+.layer-stack li span { color: var(--ink); }
+.layer-stack li b { color: var(--jade-deep); }
 .layer-stack li:nth-child(1) { background: var(--dawn-wash); border-color: var(--dawn); }
-.layer-stack li:nth-child(1) b, .layer-stack li:nth-child(1) span { color: var(--ink); }
-.layer-stack li:nth-child(2) { background: var(--jade-wash); border-color: var(--jade); }
-.layer-stack li:nth-child(2) b { color: var(--jade-deep); }
-.layer-stack li:nth-child(2) span { color: var(--ink); }
-.layer-stack li:nth-child(3) { background: var(--jade-deep); border-color: var(--jade-deep); }
-.layer-stack li:nth-child(3) b, .layer-stack li:nth-child(3) span { color: var(--mist); }
-.layer-stack li:nth-child(4) { background: var(--ink); border-color: var(--ink); }
-.layer-stack li:nth-child(4) b { color: var(--dawn-strong); }
-.layer-stack li:nth-child(4) span { color: var(--mist); }
+.layer-stack li:nth-child(2) { background: color-mix(in srgb, var(--dawn-wash) 50%, var(--jade-wash)); border-color: color-mix(in srgb, var(--dawn) 50%, var(--jade)); }
+.layer-stack li:nth-child(3) { background: var(--jade-wash); border-color: var(--jade); }
+.layer-stack li:nth-child(4) { background: var(--pebble-pale); border-color: var(--pebble); }
 .small { font-size: 0.9rem; }
 
 /* Looping figure slideshow inside a card */
