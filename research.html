@@ -119,6 +119,31 @@
         <article class="card">
           <span class="meta">Flight electronics</span>
           <h3>Custom flight controller</h3>
+          <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="Custom flight controller video and figures">
+            <div class="slides slides-wide">
+              <figure class="slide is-active" data-caption="Outdoor flight test of a quadcopter running the custom flight controller.">
+                <video src="assets/figures/flightcontroller/fc-flight.mp4" poster="assets/figures/flightcontroller/fc-flight-poster.webp" muted playsinline preload="metadata" controls aria-label="Video of a quadcopter flying with the custom flight controller"></video>
+              </figure>
+              <figure class="slide" data-caption="Hardware architecture: STM32F411 Black Pill with IMU, barometer, compass, GPS, receiver and four ESCs.">
+                <img src="assets/figures/flightcontroller/hardware-architecture.webp" width="642" height="461" loading="lazy" alt="Block diagram of the custom flight controller hardware">
+              </figure>
+              <figure class="slide" data-caption="Wiring of sensors, GPS, receiver and motor outputs to the STM32 board.">
+                <img src="assets/figures/flightcontroller/wiring.webp" width="801" height="450" loading="lazy" alt="Wiring diagram of the STM32 flight controller">
+              </figure>
+              <figure class="slide" data-caption="Receiver set-up in the INAV 6.0 Configurator, with all channels responding.">
+                <img src="assets/figures/flightcontroller/inav-receiver.webp" width="1400" height="971" loading="lazy" alt="INAV Configurator receiver tab showing channel values">
+              </figure>
+              <figure class="slide" data-caption="The quadcopter built around the custom controller.">
+                <img src="assets/figures/flightcontroller/quad-build.webp" width="245" height="270" loading="lazy" alt="Quadcopter with the custom flight controller and a radio transmitter">
+              </figure>
+            </div>
+            <div class="slide-bar">
+              <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous">‹</button>
+              <p class="slide-caption" aria-live="polite">Outdoor flight test of a quadcopter running the custom flight controller.</p>
+              <span class="slide-count">1 / 5</span>
+              <button class="slide-btn" type="button" data-dir="1" aria-label="Next">›</button>
+            </div>
+          </div>
           <p>A low-cost flight controller built on an STM32 with IMU, barometer, compass and GPS, running INAV firmware. It gives the lab an open platform for teaching and experiments.</p>
           <ul class="tags jade"><li>STM32</li><li>INAV</li><li>Embedded systems</li></ul>
         </article>
