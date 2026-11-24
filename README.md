@@ -1,6 +1,6 @@
-# digitalAijaz.github.io
+# Website
 
-Personal website of Dr. Mohd Aijaz Siddiqui, served by GitHub Pages at https://digitalaijaz.github.io
+Personal website of Dr. Mohd Aijaz Siddiqui, served by GitHub Pages at https://digitalaijaz.github.io/Website/
 
 Plain HTML/CSS/JS, no build step. Theme: "Jade Pebble Morning" (custom; tokens in `assets/style.css`).
 
