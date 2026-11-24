@@ -406,3 +406,6 @@ tr:last-child td { border-bottom: none; }
 .app-status { margin-top: 0.6rem; max-width: 48rem; }
 .app-note { margin-top: 1.4rem; }
 .app-ver { display: block; white-space: pre-line; line-height: 1.5; }
+/* AijazLabs page: logo beside the heading */
+.lab-title { display: flex; align-items: center; gap: 1rem; margin-top: 0.4rem; }
+.lab-title img { width: clamp(64px, 9vw, 96px); height: auto; flex: none; }
