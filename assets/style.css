@@ -101,11 +101,11 @@ p { margin: 0; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.8rem; }
 .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 800; }
 .brand-mark {
-  width: 34px; height: 30px;
+  height: 28px; padding: 0 0.55rem;
   background: linear-gradient(140deg, var(--jade), var(--jade-deep));
-  border-radius: 48% 52% 44% 56% / 55% 45% 55% 45%;
+  border-radius: 8px;
   display: grid; place-items: center;
-  color: #fff; font-size: 0.8rem; letter-spacing: .02em;
+  color: #fff; font-size: 0.72rem; letter-spacing: .03em;
 }
 .nav-links { display: flex; gap: 0.25rem; align-items: center; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 .nav-links a {
