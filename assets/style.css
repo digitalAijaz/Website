@@ -405,3 +405,4 @@ tr:last-child td { border-bottom: none; }
 .app-dl { align-self: flex-start; }
 .app-status { margin-top: 0.6rem; max-width: 48rem; }
 .app-note { margin-top: 1.4rem; }
+.app-ver { display: block; white-space: pre-line; line-height: 1.5; }

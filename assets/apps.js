@@ -15,6 +15,11 @@
     return false;
   }
   function mb(bytes) { return Math.max(1, Math.round(bytes / 1e6)) + " MB"; }
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function day(iso) {               // "2026-11-24T08:24:18Z" -> "24 Nov 2026" (UTC date, same as the page)
+    var p = iso.slice(0, 10).split("-");
+    return parseInt(p[2], 10) + " " + MONTHS[parseInt(p[1], 10) - 1] + " " + p[0];
+  }
   function label(key) { return key.replace(/^Aijaz/, "").replace(/([a-z])([A-Z])/g, "$1 $2"); }
 
   function newCard(key) {
@@ -44,16 +49,20 @@
             var m = SETUP.exec(a.name);
             if (!m) return;
             var cur = best[m[1]];
-            if (!cur || newer(m[2], cur.version)) best[m[1]] = { version: m[2], url: a.browser_download_url, size: a.size };
+            if (!cur || newer(m[2], cur.version)) best[m[1]] = { version: m[2], url: a.browser_download_url, size: a.size, date: rel.published_at };
           });
         });
+        var latest = "";
         Object.keys(best).forEach(function (key) {
           var card = grid.querySelector('[data-app="' + key + '"]');
           if (!card) { card = newCard(key); grid.appendChild(card); }
           var b = best[key];
-          card.querySelector(".app-ver").textContent = "v" + b.version + " · " + mb(b.size);
+          card.querySelector(".app-ver").textContent = "v" + b.version + " · " + mb(b.size) + "\nUpdated " + day(b.date);
           card.querySelector(".app-dl").href = b.url;
+          if (b.date > latest) latest = b.date;
         });
+        var upd = document.getElementById("app-updated");
+        if (upd && latest) { upd.textContent = day(latest); upd.setAttribute("datetime", latest.slice(0, 10)); }
       })
       .catch(function () { /* keep the versions written in the page */ });
   });
