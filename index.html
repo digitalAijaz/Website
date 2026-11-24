@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Manrope:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=15">
-<script src="assets/site.js?v=5"></script>
+<link rel="stylesheet" href="assets/style.css?v=18">
+<script src="assets/site.js?v=7"></script>
 </head>
 <body>
 
@@ -26,6 +26,7 @@
       <li><a href="research.html">Research &amp; Projects</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="skills.html">Education &amp; Skills</a></li>
+      <li><a href="apps.html">Apps</a></li>
       <li><a class="cv-link" href="assets/Aijaz-Siddiqui-CV.pdf">Download CV</a></li>
     </ul>
   </nav>
@@ -43,11 +44,12 @@
           <a class="btn btn-primary" href="research.html">See my work</a>
           <a class="btn btn-ghost" href="assets/Aijaz-Siddiqui-CV.pdf">Download CV</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/eraijaz/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/digitalAijaz" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
 
       <div class="figure-card hero-show">
-        <div class="slideshow" data-interval="3500" aria-roledescription="carousel" aria-label="Figures from my research and software">
+        <div class="slideshow" data-interval="3500" aria-roledescription="carousel" aria-label="Photos, videos and figures from my work">
           <div class="slides">
             <figure class="slide slide-dark is-active">
               <img src="assets/figures/mayamanav/model.webp" width="1200" height="874" alt="MayaManav digital human standing in its home posture">
@@ -66,6 +68,99 @@
             </figure>
             <figure class="slide slide-dark">
               <img data-src="assets/figures/mayamanav/software.webp" width="1600" height="864" alt="Software window with the 3D model, analysis charts and joint sliders">
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/gesture/gesture-demo.mp4" poster="assets/figures/gesture/gesture-demo-poster.webp" muted playsinline preload="none" aria-label="Video of the gesture-controlled drone flight test"></video>
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/gesture/architecture.webp" width="1400" height="716" alt="Diagram of the gesture control chain from glove sensors to the drone">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/gesture/gesture-mapping.webp" width="1400" height="590" alt="Table of hand gestures and the matching drone responses">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/gesture/uart-wiring.webp" width="1400" height="1136" alt="Wiring diagram from an ESP8266 board to a Pixhawk telemetry port">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/gesture/bench-validation.webp" width="1400" height="837" alt="Breadboard prototype with Mission Planner radio calibration and serial monitor output">
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/vtol/vtol-media2.mp4" poster="assets/figures/vtol/vtol-media2-poster.webp" muted playsinline preload="none" aria-label="Video of the hybrid VTOL drone taking off at night"></video>
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/vtol/vtol-3d-printing.mp4" poster="assets/figures/vtol/vtol-3d-printing-poster.webp" muted playsinline preload="none" aria-label="Timelapse video of an airframe part being 3D printed"></video>
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/vtol/vtol-airframe.webp" width="1400" height="1050" alt="Top view of the assembled hybrid VTOL drone">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/vtol/quadplane-frame.webp?v=2" width="1400" height="508" alt="VTOL top views labelling motors M1 to M4 with their clockwise and counter-clockwise spin directions">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/vtol/wing-cad.webp" width="1400" height="876" alt="CAD bottom and side views of a wing section with rod and servo mounts">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/vtol/here3-gps.webp" width="1400" height="1132" alt="Here3+ GPS module with CAN connector pinouts">
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/flightcontroller/fc-flight.mp4" poster="assets/figures/flightcontroller/fc-flight-poster.webp" muted playsinline preload="none" aria-label="Video of a quadcopter flying with the custom flight controller"></video>
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/flightcontroller/hardware-architecture.webp" width="642" height="461" alt="Block diagram of the custom flight controller hardware">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/flightcontroller/wiring.webp" width="801" height="450" alt="Wiring diagram of the STM32 flight controller">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/flightcontroller/inav-receiver.webp" width="1400" height="971" alt="INAV Configurator receiver tab showing channel values">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/flightcontroller/quad-build.webp" width="245" height="270" alt="Quadcopter with the custom flight controller and a radio transmitter">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/propulsion/home.webp" width="1400" height="743" alt="UAV Design Suite home screen with module tiles">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/propulsion/uav-sizing.webp" width="1400" height="744" alt="UAV sizing screen with design inputs and live weather">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/propulsion/blade-plots.webp" width="1400" height="743" alt="Plots of blade chord and pitch distribution">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/propulsion/components.webp" width="1400" height="742" alt="Component recommendation screen with flight time estimates">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/propulsion/live-telemetry.webp" width="1400" height="748" alt="Live telemetry dashboard connected to a flight controller">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/log-collection.webp" width="739" height="633" alt="Diagram of flight log collection through SD card and radio telemetry">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/dataflash-messages.webp" width="1033" height="617" alt="Mission Planner log browser listing DataFlash message types">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/log-analysis-tools.webp" width="1400" height="1019" alt="Flowchart of flight log analysis using four tools">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/vibration.webp" width="1400" height="719" alt="Plot of total vibration magnitude over flight time">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/gps-compass.webp" width="962" height="843" alt="Plots of GPS HDop, satellite count and compass field magnitude over time">
+            </figure>
+            <figure class="slide">
+              <img data-src="assets/figures/forensics/aruco-pipeline.webp" width="1400" height="933" alt="Flowchart of ArUco marker detection leading to autonomous landing">
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/vision/vision-19.mp4" poster="assets/figures/vision/vision-19-poster.webp" muted playsinline preload="none" aria-label="Video of a small drone tracking a person in a corridor"></video>
+            </figure>
+            <figure class="slide slide-dark">
+              <video src="assets/figures/vision/vision-18.mp4" poster="assets/figures/vision/vision-18-poster.webp" muted playsinline preload="none" aria-label="Video of webcam-based tracking driving a simulated drone display"></video>
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/photos/iisc-convocation-2026-ceremony.webp" width="1400" height="1050" alt="Dr. Mohd Aijaz Siddiqui receiving his PhD certificate on stage at the IISc Convocation 2026">
+            </figure>
+            <figure class="slide slide-dark">
+              <img data-src="assets/photos/iisc-convocation-2026.webp" width="1400" height="1065" alt="Dr. Mohd Aijaz Siddiqui holding his PhD certificate in front of the IISc Convocation 2026 backdrop">
             </figure>
             <figure class="slide">
               <img data-src="assets/figures/stability/star-polygon-validation.webp" width="1600" height="895" alt="Four panels showing valid and invalid centre-of-pressure regions for different sets of support points">
@@ -145,7 +240,7 @@
           </div>
           <div class="slide-bar slide-bar-compact">
             <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
-            <span class="slide-count">1 / 31</span>
+            <span class="slide-count">1 / 62</span>
             <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
           </div>
         </div>
@@ -231,6 +326,7 @@
           <a class="btn btn-primary" href="mailto:visionaijaz@gmail.com">visionaijaz@gmail.com</a>
           <button class="btn btn-ghost copy-btn" type="button" data-copy="visionaijaz@gmail.com">Copy email</button>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/eraijaz/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/digitalAijaz" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </div>
@@ -240,7 +336,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© <span id="year">2026</span> Dr. Mohd Aijaz Siddiqui</span>
-    <span><a href="mailto:visionaijaz@gmail.com">visionaijaz@gmail.com</a> · <a href="https://www.linkedin.com/in/eraijaz/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <span><a href="mailto:visionaijaz@gmail.com">visionaijaz@gmail.com</a> · <a href="https://www.linkedin.com/in/eraijaz/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/digitalAijaz" target="_blank" rel="noopener">GitHub</a></span>
   </div>
 </footer>
 </body>

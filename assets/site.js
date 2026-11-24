@@ -46,7 +46,7 @@
     });
 
     // Looping slideshows: <div class="slideshow" data-interval="ms"> with .slide figures
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Slideshows run even with "reduce motion" on: the stylesheet then drops the cross-fade, so slides swap without animation
     document.querySelectorAll(".slideshow").forEach(function (show) {
       var slides = show.querySelectorAll(".slide");
       var caption = show.querySelector(".slide-caption");
@@ -64,9 +64,13 @@
       function videoOf(k) { return slides[k].querySelector("video"); }
       function playIfVideo() {
         var v = videoOf(i);
-        if (!v || reduceMotion) return;
+        if (!v) return;
         try { v.currentTime = 0; } catch (e) {}
-        var p = v.play(); if (p && p.catch) p.catch(function () {});
+        var at = i;
+        // If the browser blocks playback, show the poster for one interval and move on
+        var p = v.play(); if (p && p.catch) p.catch(function () {
+          setTimeout(function () { if (at === i && !paused && !document.hidden) { go(i + 1); start(); } }, interval);
+        });
       }
       slides.forEach(function (s, k) {
         var v = s.querySelector("video");
@@ -84,7 +88,7 @@
       }
       function start() {
         stop();
-        if (reduceMotion || paused || videoOf(i)) return;   // videos advance on "ended"
+        if (paused || videoOf(i)) return;   // videos advance on "ended"
         timer = setInterval(function () { go(i + 1); if (videoOf(i)) stop(); }, interval);
       }
       function stop() { if (timer) { clearInterval(timer); timer = null; } }
