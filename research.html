@@ -398,64 +398,84 @@
         <article class="card">
           <h3>What changed</h3>
           <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="MayaManav software screenshots">
-            <div class="slides slides-dark">
-              <figure class="slide is-active" data-caption="The MayaManav digital human: 18 rigid segments, 41 degrees of freedom and anatomical joint limits.">
-                <img src="assets/figures/mayamanav/model.webp" width="1200" height="874" loading="eager" alt="MayaManav digital human standing in its home posture">
+            <div class="slides slides-wide slides-dark">
+              <figure class="slide is-active" data-caption="Reaching low and forward: the model looks at the target first, then bends at the hips and knees while staying stable at every step.">
+                <video src="assets/figures/mayamanav/reach-forward-low.mp4" poster="assets/figures/mayamanav/reach-forward-low-poster.webp" muted playsinline preload="metadata" controls aria-label="Animation of the model reaching a low target in front"></video>
               </figure>
-              <figure class="slide" data-caption="Kinematic skeleton with segment centres of gravity and the whole-body centre of gravity.">
-                <img src="assets/figures/mayamanav/skeleton.webp" width="1200" height="1166" loading="lazy" alt="Stick-figure skeleton of the model with one arm raised">
+              <figure class="slide" data-caption="Reaching across the body to the left: the trunk turns and the feet stay planted.">
+                <video src="assets/figures/mayamanav/reach-across-left.mp4" poster="assets/figures/mayamanav/reach-across-left-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching across its body"></video>
               </figure>
-              <figure class="slide" data-caption="Sensing-based stability: base of support, star polygon and the stable region where toe and heel loads stay acceptable.">
-                <img src="assets/figures/mayamanav/gmv-stability.webp" width="1200" height="898" loading="lazy" alt="Top view of the base of support with the stable region shaded">
+              <figure class="slide" data-caption="Reaching up in front at shoulder height: mostly the arm moves, the trunk stays nearly upright.">
+                <video src="assets/figures/mayamanav/reach-high-front.mp4" poster="assets/figures/mayamanav/reach-high-front-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching a high target in front"></video>
               </figure>
-              <figure class="slide" data-caption="Forward reach with 5 kg in the right hand: torque and load factor at every joint, updated as the posture changes.">
-                <img src="assets/figures/mayamanav/forward-reach.webp" width="1200" height="874" loading="lazy" alt="Model reaching forward with a joint torque table and bar charts">
+              <figure class="slide" data-caption="Reaching with 5 kg in the hand, with joint torques and load factors updated live in the results drawer.">
+                <video src="assets/figures/mayamanav/reach-5kg.mp4" poster="assets/figures/mayamanav/reach-5kg-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching with a 5 kg load while bar charts of joint torques change"></video>
               </figure>
-              <figure class="slide" data-caption="Lifting 10 kg in each hand: joints coloured by load factor, from green (low) to red (high).">
-                <img src="assets/figures/mayamanav/lifting-10kg.webp" width="1200" height="874" loading="lazy" alt="Model squatting to lift with joints coloured by load">
+              <figure class="slide" data-caption="The redesigned software: balance card on top, collapsible posture, load, reach and display panels on the right.">
+                <img src="assets/figures/mayamanav/gui-home.webp" width="1440" height="860" loading="lazy" alt="MayaManav window with the standing model, a balance card and a side panel">
               </figure>
-              <figure class="slide" data-caption="The MayaManav software: one slider per degree of freedom, with live stability and joint-load analysis.">
-                <img src="assets/figures/mayamanav/software.webp" width="1600" height="864" loading="lazy" alt="Software window with the 3D model, analysis charts and joint sliders">
+              <figure class="slide" data-caption="Reach panel after a solved motion: hand on the target, stability and effort for the whole movement.">
+                <img src="assets/figures/mayamanav/gui-reach.webp" width="1440" height="860" loading="lazy" alt="Model touching the pink reach target with the reach panel open">
+              </figure>
+              <figure class="slide" data-caption="5 kg in the right hand: signed joint torques and load factors for all 18 joints.">
+                <img src="assets/figures/mayamanav/gui-joint-loads.webp" width="1440" height="860" loading="lazy" alt="Bar charts of joint torques and load percentages below the bent model">
+              </figure>
+              <figure class="slide" data-caption="The same posture as a table: torque on each axis, load factor and the most loaded axis per joint.">
+                <img src="assets/figures/mayamanav/gui-load-table.webp" width="1440" height="860" loading="lazy" alt="Table of joint torques and load percentages">
+              </figure>
+              <figure class="slide" data-caption="Sensing-based stability: stability and discomfort measures, the load on each foot contact point and the stable region.">
+                <img src="assets/figures/mayamanav/gui-stability.webp" width="1440" height="860" loading="lazy" alt="Stability tab with bars for each foot contact point">
+              </figure>
+              <figure class="slide" data-caption="Right-click a joint to change its angles, reset it or make its segment the fixed root.">
+                <img src="assets/figures/mayamanav/gui-joint-menu.webp" width="1440" height="860" loading="lazy" alt="Pop-up menu on the right elbow with a flexion slider">
+              </figure>
+              <figure class="slide" data-caption="Light theme with joint numbers and the built-in help for mouse, keys and colours.">
+                <img src="assets/figures/mayamanav/gui-light-help.webp" width="1440" height="860" loading="lazy" alt="Light-coloured window with a help panel listing mouse actions, keys and colours">
               </figure>
             </div>
             <div class="slide-bar">
               <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
-              <p class="slide-caption" aria-live="polite">The MayaManav digital human: 18 rigid segments, 41 degrees of freedom and anatomical joint limits.</p>
-              <span class="slide-count">1 / 6</span>
+              <p class="slide-caption" aria-live="polite">Reaching low and forward: the model looks at the target first, then bends at the hips and knees while staying stable at every step.</p>
+              <span class="slide-count">1 / 11</span>
               <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
             </div>
           </div>
           <ul>
             <li>Exact closed-form Jacobians for any body point and the whole-body centre of mass, for any grounded segment, verified to 10<sup>-10</sup>. These replace finite-difference gradients that needed 42 full recomputations per step.</li>
             <li>A floating-base posture with 47 variables, named task points, and re-rooting as a single parameter.</li>
-            <li>The sensing-based stability model rebuilt for any number of contacts.</li>
-            <li>Joint torques on all 54 axes and joint-strength load factors.</li>
-            <li>An interactive Win32/OpenGL viewer and a skinned 3D body.</li>
+            <li>The sensing-based stability model rebuilt for any number of contacts, now with exact gradients of the load shares.</li>
+            <li>Joint torques on all 54 axes, joint-strength load factors and the joint and postural effort measures.</li>
+            <li>A reach solver: the model looks at the target first and then moves the hand there step by step, with the feet planted, joint limits respected and stability checked at every step; an effort limit and a hand load are optional.</li>
+            <li>Movement cost from published segment inertia (de Leva, 1996) instead of a rule of thumb.</li>
+            <li>A redesigned viewer (GLFW, Dear ImGui and OpenGL) with collapsible panels, a results drawer, right-click menus, light and dark themes, and a skinned 3D body.</li>
           </ul>
           <p class="muted small">It replaces a legacy code base of about 35,000 lines in which the model, maths and drawing lived in one class and gradients came from trial and error.</p>
         </article>
         <article class="card">
           <h3>How it is checked</h3>
           <div class="stats" style="grid-template-columns: 1fr 1fr;">
-            <div class="stat"><b>49</b><span>automated test cases</span></div>
-            <div class="stat"><b>33,147</b><span>individual checks, all passing</span></div>
-            <div class="stat"><b>41</b><span>degrees of freedom, 18 segments</span></div>
-            <div class="stat"><b>90 pp.</b><span>technical report and code guide</span></div>
+            <div class="stat"><b>76</b><span>automated test cases</span></div>
+            <div class="stat"><b>56,137</b><span>individual checks, all passing</span></div>
+            <div class="stat"><b>75 / 75</b><span>reach targets on a test grid reached</span></div>
+            <div class="stat"><b>150+ pp.</b><span>technical report and code guide</span></div>
           </div>
-          <ul class="tags"><li>C++20</li><li>Eigen</li><li>doctest</li><li>vcpkg</li><li>Win32 API</li><li>OpenGL</li></ul>
+          <ul class="tags"><li>C++20</li><li>Eigen</li><li>OSQP</li><li>Dear ImGui</li><li>GLFW</li><li>OpenGL</li><li>doctest</li><li>vcpkg</li></ul>
 
           <h4 class="card-sub">What the tests prove</h4>
           <ul class="check-list">
             <li>Exact Jacobians match numerical differentiation for 12 postures, 3 grounded segments and all 47 posture variables.</li>
             <li>Joint torques computed two independent ways agree to 10<sup>-9</sup> N·m across 20 random postures and loads.</li>
             <li>Support-force shares on 400 random contact layouts are never negative, sum to one and reproduce the centre of pressure.</li>
+            <li>Exact gradients of the support-force shares match numerical differentiation to 10<sup>-8</sup>.</li>
+            <li>The reach solver reaches all 75 targets of a grid (5 directions, 5 heights, 3 distances) from standing; on the same test reaches the legacy search broke the stability or joint limits in 3 of 4.</li>
             <li>Segment lengths hold over 200 random postures, and saved postures reload exactly.</li>
           </ul>
 
           <h4 class="card-sub">How the code is layered</h4>
           <ol class="layer-stack" aria-label="Software layers, top depends on bottom">
-            <li><b>Viewer</b><span>Window, sliders and live charts</span></li>
-            <li><b>Analysis</b><span>Support, GMV stability, statics, strength</span></li>
+            <li><b>Viewer</b><span>Panels, menus, live charts and reach playback</span></li>
+            <li><b>Solver</b><span>Reach motion by quadratic programming (OSQP)</span></li>
+            <li><b>Analysis</b><span>Support, GMV stability, statics, strength, effort</span></li>
             <li><b>Model</b><span>Skeleton, kinematics, Jacobians, centres of gravity</span></li>
             <li><b>Maths</b><span>Vectors, rotations and transforms (Eigen)</span></li>
           </ol>
