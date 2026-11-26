@@ -392,94 +392,86 @@
       <div class="section-head">
         <span class="eyebrow">2026 – present</span>
         <h2>MayaManav, re-engineered</h2>
-        <p>After the PhD I rebuilt the Maya-Manav digital human from its published definition as a modular, tested C++ code base, so that later work starts from verified numbers.</p>
+        <p>Maya-Manav is the digital human built at IISc: a computer model of the human body that predicts how a person stands, bends and reaches, whether they stay balanced, and how hard their joints have to work. With such a model, designers can check a workstation, a tool or a product for comfort and safety before anything is built. After my PhD I rebuilt it from the ground up as modern, fully tested software, and gave it a new interactive interface.</p>
       </div>
       <div class="grid-2">
         <article class="card">
-          <h3>What changed</h3>
+          <h3>What it does</h3>
           <div class="slideshow" data-interval="4500" aria-roledescription="carousel" aria-label="MayaManav software screenshots">
             <div class="slides slides-wide slides-dark">
-              <figure class="slide is-active" data-caption="Reaching low and forward: the model looks at the target first, then bends at the hips and knees while staying stable at every step.">
+              <figure class="slide is-active" data-caption="Reaching for a low point in front: the digital human first looks at the target, then bends its hips and knees, keeping its balance throughout.">
                 <video src="assets/figures/mayamanav/reach-forward-low.mp4" poster="assets/figures/mayamanav/reach-forward-low-poster.webp" muted playsinline preload="metadata" controls aria-label="Animation of the model reaching a low target in front"></video>
               </figure>
-              <figure class="slide" data-caption="Reaching across the body to the left: the trunk turns and the feet stay planted.">
+              <figure class="slide" data-caption="Reaching across the body: the upper body turns while both feet stay where they are.">
                 <video src="assets/figures/mayamanav/reach-across-left.mp4" poster="assets/figures/mayamanav/reach-across-left-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching across its body"></video>
               </figure>
-              <figure class="slide" data-caption="Reaching up in front at shoulder height: mostly the arm moves, the trunk stays nearly upright.">
+              <figure class="slide" data-caption="Reaching up in front: mostly the arm moves and the body stays upright, as a person would do.">
                 <video src="assets/figures/mayamanav/reach-high-front.mp4" poster="assets/figures/mayamanav/reach-high-front-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching a high target in front"></video>
               </figure>
-              <figure class="slide" data-caption="Reaching with 5 kg in the hand, with joint torques and load factors updated live in the results drawer.">
+              <figure class="slide" data-caption="Reaching with a 5 kg weight in the hand: the charts below show how hard each joint works as the body moves.">
                 <video src="assets/figures/mayamanav/reach-5kg.mp4" poster="assets/figures/mayamanav/reach-5kg-poster.webp" muted playsinline preload="none" controls aria-label="Animation of the model reaching with a 5 kg load while bar charts of joint torques change"></video>
               </figure>
-              <figure class="slide" data-caption="The redesigned software: balance card on top, collapsible posture, load, reach and display panels on the right.">
+              <figure class="slide" data-caption="The new software window: the 3D body in the middle, a balance indicator at the top left and the controls on the right.">
                 <img src="assets/figures/mayamanav/gui-home.webp" width="1440" height="860" loading="lazy" alt="MayaManav window with the standing model, a balance card and a side panel">
               </figure>
-              <figure class="slide" data-caption="Reach panel after a solved motion: hand on the target, stability and effort for the whole movement.">
+              <figure class="slide" data-caption="After a reach: the hand is on the pink target, and the panel sums up balance and effort for the whole movement.">
                 <img src="assets/figures/mayamanav/gui-reach.webp" width="1440" height="860" loading="lazy" alt="Model touching the pink reach target with the reach panel open">
               </figure>
-              <figure class="slide" data-caption="5 kg in the right hand: signed joint torques and load factors for all 18 joints.">
+              <figure class="slide" data-caption="Bending with 5 kg in the hand: each bar shows the load on one joint; joints on the body turn from green to red as the load rises.">
                 <img src="assets/figures/mayamanav/gui-joint-loads.webp" width="1440" height="860" loading="lazy" alt="Bar charts of joint torques and load percentages below the bent model">
               </figure>
-              <figure class="slide" data-caption="The same posture as a table: torque on each axis, load factor and the most loaded axis per joint.">
+              <figure class="slide" data-caption="The same posture as a table: the turning force at each joint and how much of that joint's strength it uses.">
                 <img src="assets/figures/mayamanav/gui-load-table.webp" width="1440" height="860" loading="lazy" alt="Table of joint torques and load percentages">
               </figure>
-              <figure class="slide" data-caption="Sensing-based stability: stability and discomfort measures, the load on each foot contact point and the stable region.">
+              <figure class="slide" data-caption="Balance: how body weight is shared between the heels and toes, and whether the person would feel stable.">
                 <img src="assets/figures/mayamanav/gui-stability.webp" width="1440" height="860" loading="lazy" alt="Stability tab with bars for each foot contact point">
               </figure>
-              <figure class="slide" data-caption="Right-click a joint to change its angles, reset it or make its segment the fixed root.">
+              <figure class="slide" data-caption="Right-click any joint to bend it directly on the body.">
                 <img src="assets/figures/mayamanav/gui-joint-menu.webp" width="1440" height="860" loading="lazy" alt="Pop-up menu on the right elbow with a flexion slider">
               </figure>
-              <figure class="slide" data-caption="Light theme with joint numbers and the built-in help for mouse, keys and colours.">
+              <figure class="slide" data-caption="Light theme and built-in help.">
                 <img src="assets/figures/mayamanav/gui-light-help.webp" width="1440" height="860" loading="lazy" alt="Light-coloured window with a help panel listing mouse actions, keys and colours">
               </figure>
             </div>
             <div class="slide-bar">
               <button class="slide-btn" type="button" data-dir="-1" aria-label="Previous figure">‹</button>
-              <p class="slide-caption" aria-live="polite">Reaching low and forward: the model looks at the target first, then bends at the hips and knees while staying stable at every step.</p>
+              <p class="slide-caption" aria-live="polite">Reaching for a low point in front: the digital human first looks at the target, then bends its hips and knees, keeping its balance throughout.</p>
               <span class="slide-count">1 / 11</span>
               <button class="slide-btn" type="button" data-dir="1" aria-label="Next figure">›</button>
             </div>
           </div>
           <ul>
-            <li>Exact closed-form Jacobians for any body point and the whole-body centre of mass, for any grounded segment, verified to 10<sup>-10</sup>. These replace finite-difference gradients that needed 42 full recomputations per step.</li>
-            <li>A floating-base posture with 47 variables, named task points, and re-rooting as a single parameter.</li>
-            <li>The sensing-based stability model rebuilt for any number of contacts, now with exact gradients of the load shares.</li>
-            <li>Joint torques on all 54 axes, joint-strength load factors and the joint and postural effort measures.</li>
-            <li>A reach solver: the model looks at the target first and then moves the hand there step by step, with the feet planted, joint limits respected and stability checked at every step; an effort limit and a hand load are optional.</li>
-            <li>Movement cost from published segment inertia (de Leva, 1996) instead of a rule of thumb.</li>
-            <li>A redesigned viewer (GLFW, Dear ImGui and OpenGL) with collapsible panels, a results drawer, right-click menus, light and dark themes, and a skinned 3D body.</li>
+            <li><b>Moves like a person.</b> Show it a point to reach and it works out the whole movement: it looks at the target first, then bends, turns and stretches step by step, with both feet on the floor and no joint bent beyond its natural range.</li>
+            <li><b>Knows when it would lose balance.</b> It works out how the body's weight is shared between the heels and toes and avoids postures in which a person would feel unsteady. This uses the balance model from my PhD.</li>
+            <li><b>Shows the strain on every joint.</b> For any posture, with or without a weight in the hand, it shows how much of each joint's strength is being used, so the most tiring postures stand out.</li>
+            <li><b>Easy to explore.</b> A 3D window where the body can be posed with the mouse, with live charts, menus, and light and dark themes.</li>
           </ul>
-          <p class="muted small">It replaces a legacy code base of about 35,000 lines in which the model, maths and drawing lived in one class and gradients came from trial and error.</p>
         </article>
         <article class="card">
-          <h3>How it is checked</h3>
+          <h3>Why I rebuilt it</h3>
           <div class="stats" style="grid-template-columns: 1fr 1fr;">
-            <div class="stat"><b>76</b><span>automated test cases</span></div>
-            <div class="stat"><b>56,137</b><span>individual checks, all passing</span></div>
-            <div class="stat"><b>75 / 75</b><span>reach targets on a test grid reached</span></div>
-            <div class="stat"><b>150+ pp.</b><span>technical report and code guide</span></div>
+            <div class="stat"><b>18</b><span>body segments, from the feet to the head</span></div>
+            <div class="stat"><b>41</b><span>separate joint movements, such as bending, twisting and raising</span></div>
+            <div class="stat"><b>56,000+</b><span>automatic checks run on every change</span></div>
+            <div class="stat"><b>150+</b><span>pages of technical documentation</span></div>
           </div>
-          <ul class="tags"><li>C++20</li><li>Eigen</li><li>OSQP</li><li>Dear ImGui</li><li>GLFW</li><li>OpenGL</li><li>doctest</li><li>vcpkg</li></ul>
-
-          <h4 class="card-sub">What the tests prove</h4>
           <ul class="check-list">
-            <li>Exact Jacobians match numerical differentiation for 12 postures, 3 grounded segments and all 47 posture variables.</li>
-            <li>Joint torques computed two independent ways agree to 10<sup>-9</sup> N·m across 20 random postures and loads.</li>
-            <li>Support-force shares on 400 random contact layouts are never negative, sum to one and reproduce the centre of pressure.</li>
-            <li>Exact gradients of the support-force shares match numerical differentiation to 10<sup>-8</sup>.</li>
-            <li>The reach solver reaches all 75 targets of a grid (5 directions, 5 heights, 3 distances) from standing; on the same test reaches the legacy search broke the stability or joint limits in 3 of 4.</li>
-            <li>Segment lengths hold over 200 random postures, and saved postures reload exactly.</li>
+            <li><b>A solid base for new research.</b> The original software had grown over many years of research into about 35,000 lines in which everything depended on everything else. The new version keeps each part separate, so new ideas can be added without breaking old ones.</li>
+            <li><b>Results that can be trusted.</b> Every calculation is checked automatically, often by working it out in two independent ways and comparing the answers.</li>
+            <li><b>More exact and faster.</b> Estimates found by trial and error were replaced by exact formulas; one such step needed 42 repeated calculations before and needs one now.</li>
+            <li><b>Better movements.</b> In side-by-side tests, the old method often ended in postures that would tip a person over or bend a joint too far. The new one stays within these limits.</li>
+            <li><b>Built on established data.</b> Body proportions and the weight of each body part come from published human measurements.</li>
           </ul>
 
-          <h4 class="card-sub">How the code is layered</h4>
+          <h4 class="card-sub">How the software is organised</h4>
           <ol class="layer-stack" aria-label="Software layers, top depends on bottom">
-            <li><b>Viewer</b><span>Panels, menus, live charts and reach playback</span></li>
-            <li><b>Solver</b><span>Reach motion by quadratic programming (OSQP)</span></li>
-            <li><b>Analysis</b><span>Support, GMV stability, statics, strength, effort</span></li>
-            <li><b>Model</b><span>Skeleton, kinematics, Jacobians, centres of gravity</span></li>
-            <li><b>Maths</b><span>Vectors, rotations and transforms (Eigen)</span></li>
+            <li><b>Screen</b><span>3D window, controls, charts and movement playback</span></li>
+            <li><b>Movement</b><span>Plans a natural reaching movement step by step</span></li>
+            <li><b>Analysis</b><span>Balance, joint loads, strength and effort</span></li>
+            <li><b>Body</b><span>Skeleton, joints and the weight of each body part</span></li>
+            <li><b>Maths</b><span>Positions, angles and rotations in 3D</span></li>
           </ol>
-          <p class="muted small">The model builds and tests without opening a window.</p>
+          <p class="muted small">Built with C++20, Eigen, OSQP, Dear ImGui, GLFW, OpenGL, doctest and vcpkg.</p>
         </article>
       </div>
     </div>
